@@ -1,0 +1,59 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: gitops-update-pipeline
+  namespace: gitops-lab
+spec:
+  params:
+    - name: git-url
+      type: string
+    - name: image-name
+      type: string
+    - name: image-tag
+      type: string
+  workspaces:
+    - name: shared-workspace
+  tasks:
+    - name: clone
+      taskRef:
+        name: git-clone
+        kind: ClusterTask
+      params:
+        - name: url
+          value: $(params.git-url)
+        - name: deleteExisting
+          value: "true"
+      workspaces:
+        - name: output
+          workspace: shared-workspace
+    - name: update-manifest
+      runAfter:
+        - clone
+      taskSpec:
+        steps:
+          - name: update
+            image: alpine
+            script: |
+              #!/bin/sh
+              cd /workspace/output/manifests/overlays/dev
+              sed -i "s/newTag:.*/newTag: $(params.image-tag)/" kustomization.yaml
+    - name: push
+      runAfter:
+        - update-manifest
+      taskRef:
+        name: git-cli
+        kind: ClusterTask
+      params:
+        - name: GIT_USER_NAME
+          value: "CI Bot"
+        - name: GIT_USER_EMAIL
+          value: "ci@example.com"
+        - name: GIT_SCRIPT
+          value: |
+            cd /workspace/output
+            git add .
+            git commit -m "Update image to $(params.image-tag)"
+            git push
+      workspaces:
+        - name: source
+          workspace: shared-workspace

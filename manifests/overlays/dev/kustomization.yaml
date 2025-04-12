@@ -1,0 +1,7 @@
+bases:
+  - ../../base
+
+images:
+  - name: gitops-demo
+    newName: image-registry.openshift-image-registry.svc:5000/gitops-lab/gitops-demo
+    newTag: latest
