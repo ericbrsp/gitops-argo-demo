@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ericbrsp/gitops-demo.git
+    repoURL: https://github.com/ericbrsp/gitops-argo-demo.git
     targetRevision: HEAD
     path: manifests/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: gitops-lab
+    namespace: gitops-argo
   syncPolicy:
     automated:
       prune: true
