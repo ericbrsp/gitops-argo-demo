@@ -6,8 +6,7 @@ FROM python:3.9-slim
 # Definindo o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copiando os arquivos da aplicação para o contêiner
-COPY ./app /app
+COPY requirements.txt .
 
 # Instalando as dependências necessárias
 RUN pip install --no-cache-dir -r requirements.txt
