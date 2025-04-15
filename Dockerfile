@@ -11,7 +11,7 @@ COPY requirements.txt .
 # Instalando as dependências necessárias
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py .
+COPY app/app.py .
 
 # Expondo a porta que o Flask vai rodar
 EXPOSE 8080
