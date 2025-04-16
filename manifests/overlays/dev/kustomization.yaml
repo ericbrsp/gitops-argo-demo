@@ -5,5 +5,5 @@ bases:
 
 images:
   - name: gitops-demo
-    newName: quay.io/egoncalv/gitops-demo:latest
+    newName: quay.io/egoncalv/gitops-demo:new
     newTag: latest
