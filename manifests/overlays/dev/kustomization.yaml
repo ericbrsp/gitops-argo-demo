@@ -4,6 +4,5 @@ bases:
   - rolebinding.yaml
 
 images:
-  - name: gitops-demo
-    newName: quay.io/egoncalv/gitops-demo
+  - name: quay.io/egoncalv/gitops-demo
     newTag: "123"
