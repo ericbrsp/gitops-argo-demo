@@ -1,1 +1,1 @@
-Repositório de testes com o Openshift Pipeline e ArgoCD v2.0
+Repositório de testes com o Openshift Pipeline e ArgoCD v2.1
