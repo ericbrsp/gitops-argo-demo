@@ -6,4 +6,4 @@ bases:
 images:
   - name: gitops-demo
     newName: quay.io/egoncalv/gitops-demo
-    newTag: 123
+    newTag: "123"
