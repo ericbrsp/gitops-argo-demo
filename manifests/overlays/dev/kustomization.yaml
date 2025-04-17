@@ -5,4 +5,4 @@ bases:
 
 images:
   - name: quay.io/egoncalv/gitops-demo
-    newTag: "$(GIT_COMMIT)"
+    newTag: "7108ac2a649faefab688818f4a67dedd0835472e"
