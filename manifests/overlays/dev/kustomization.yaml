@@ -5,4 +5,4 @@ bases:
 
 images:
   - name: quay.io/egoncalv/gitops-demo
-    newTag: "gitops-demo"
+    newTag: "quay.io/egoncalv/gitops-demo"
