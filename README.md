@@ -1,10 +1,1 @@
-1.0.2
-ddd
-dsdsdsds
-ddddd
-dsdfsdfsdddd
-dfsdfsadfsdddfddfsfdffff
-dfsdfsdfsdsdsdsdsfdfdfsdfddddsdfsdfssdfsffdfdfd
-dddddfsfddfsffffddd
-dfsdfsdfsdddd
-dfsdfdfdfsdfdfs
+# Pipeline CI + Argo - gitops-demo 2.0.1
