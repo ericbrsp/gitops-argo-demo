@@ -1,1 +1,1 @@
-# Pipeline CI + Argo - gitops-demo 2.0.2
+# Pipeline CI + Argo - gitops-demo 2.0.3
