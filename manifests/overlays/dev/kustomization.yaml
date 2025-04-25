@@ -5,4 +5,4 @@ bases:
 
 images:
   - name: quay.io/egoncalv/gitops-demo
-    newTag: "cc10bb11f8e3a76f7f33d9f0ee88168d41434113"
+    newTag: "eae2668b1d1669af194c9389aab43f53f4ca7c85"
